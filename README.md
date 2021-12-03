@@ -94,9 +94,9 @@ https://gyazo.com/2b3a069950e2cc84bcb68648caac472f
 
 | Column             | Type   | Options                   |
 | :----------------- | :----- | :------------------------ |
-| nickname           | string | null: false,              |
+| nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
-| encrypted_password | string | null: false,              |
+| encrypted_password | string | null: false               |
 | last_name          | string | null: false               |
 | first_name         | string | null: false               |
 | last_name_kana     | string | null: false               |
