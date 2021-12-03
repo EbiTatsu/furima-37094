@@ -81,6 +81,8 @@ https://furima-37094.herokuapp.com/
 <br>
 
 # ER 図
+リンクは以下
+https://gyazo.com/2b3a069950e2cc84bcb68648caac472f
 
 
 <br>
