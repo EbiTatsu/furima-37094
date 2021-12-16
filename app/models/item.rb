@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
+  # extend ActiveHash::Associations::ActiveRecordExtensions
 
   # テーブルとのアソシエーション
   # belongs_to :user
