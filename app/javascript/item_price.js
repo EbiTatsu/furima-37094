@@ -10,3 +10,4 @@ window.addEventListener('load', () => {
   ProfitDom.innerHTML = inputValue - addTaxDom.innerHTML;
   })
 });
+
