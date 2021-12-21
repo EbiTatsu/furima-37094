@@ -23,9 +23,8 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    # ログインしているユーザーと同一であればeditファイルが読み込まれる
-    # if @item.user_id == current_user.id && @item.order.nil?
-    if @item.user_id == current_user.id
+    if @item.user_id == current_user.id && @item.order.nil?
+      # ログインしているユーザーと同一であればeditのパスへ遷移
     else
       redirect_to root_path
     end
