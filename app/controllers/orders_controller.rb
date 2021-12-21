@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_item, only: [:index, :create]
   
 
   def index
@@ -37,6 +38,10 @@ class OrdersController < ApplicationController
       card: order_params[:token], # カードトークン
       currency: 'jpy'             # 通貨の種類（日本円）
     )
+  end
+
+  def set_item
+    @item = Item.find(params[:item_id])
   end
 
 
