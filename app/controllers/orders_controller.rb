@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   
 
   def index
-    @item = Item.find(params[:item_id])
+    
     if user_signed_in? && current_user.id != @item.user_id && @item.order == nil
       @item_order = ItemOrder.new
     else
@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @item = Item.find(params[:item_id])
+    
     @order_payment = OrderPayment.new(order_params)
     if @order_payment.valid?
       pay_item
@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
   end
 
   def pay_item
-    Payjp.api_key = "sk_test_bf81b3c90f68d1f3aabc2108"
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item.price,        # 商品の値段
       card: order_params[:token], # カードトークン
