@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   def index
     
     if user_signed_in? && current_user.id != @item.user_id && @item.order == nil
-      @item_order = ItemOrder.new
+      @order_payment = OrderPayment.new
     else
       redirect_to root_path
     end
